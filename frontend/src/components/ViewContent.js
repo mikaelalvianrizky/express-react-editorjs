@@ -11,7 +11,7 @@ function ViewContent() {
 
     useEffect(() => {
         const fetchContent = async () => {
-            const response = await fetch(`http://localhost:5000/get-content/${id}`);
+            const response = await fetch(`http://localhost:5000/code/${id}`);
             if (response.ok) {
                 const data = await response.json();
 

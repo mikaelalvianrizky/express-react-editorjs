@@ -52,9 +52,9 @@ Inspired by the [awesome](https://github.com/sindresorhus/awesome) list. Feel fr
 * [@editorjs/warning](https://github.com/editor-js/warning) — warning tool can be used as editorials notifications or appeals
 * [@editorjs/delimiter](https://github.com/editor-js/delimiter) — delimiter tool
 * [editorjs-alert](https://github.com/vishaltelangre/editorjs-alert) - tool for adding colorful alert messages
-* [header-with-alignment](https://github.com/wandersonsousa/header-with-alignment) - header block base tool with alignment control
-* [paragraph-with-alignment](https://github.com/kaaaaaaaaaaai/paragraph-with-alignment) - text block base tool with alignment control. FYI [editorjs-alignment-blocktune](https://github.com/kaaaaaaaaaaai/editorjs-alignment-blocktune)
-* [header-with-anchor](https://github.com/Aleksst95/header-with-anchor) - header block with the ability to set an anchor text
+* [editorjs-header-with-alignment](https://github.com/wandersonsousa/header-with-alignment) - header block base tool with alignment control
+* [editorjs-paragraph-with-alignment@3.x](https://github.com/kaaaaaaaaaaai/paragraph-with-alignment) - text block base tool with alignment control. FYI [editorjs-alignment-blocktune](https://github.com/kaaaaaaaaaaai/editorjs-alignment-blocktune)
+* [editorjs-header-with-anchor](https://github.com/Aleksst95/header-with-anchor) - header block with the ability to set an anchor text
 * [editorjs-toggle-block](https://github.com/kommitters/editorjs-toggle-block) - tool for nesting blocks in a toggleable element
 * [editorjs-aitext](https://github.com/etozhealkhipce/editorjs-aitext) - ai suggestions tool based on paragraph tool and openai node lib
 * [title-editorjs](https://github.com/EmersonMatias/title-editorjs) - Provides Title (headings) Blocks for the Editor.js with various settings like H1...H6, colors (red, pink, purple...) and text-align. It is compatible with react and typescript, without causing typing errors.
@@ -77,7 +77,7 @@ Inspired by the [awesome](https://github.com/sindresorhus/awesome) list. Feel fr
 * [editorjs-inline-image](https://github.com/kommitters/editorjs-inline-image) — embed images from image files, URLs or Unsplash
 * [mr8bit/carousel-editorjs](https://github.com/mr8bit/carousel-editorjs) — Carousel/Gallery Block for the Editor.js
 * [mdgaziur/EditorJS-LaTeX](https://github.com/mdgaziur/EditorJS-LaTeX) — LaTeX block support for EditorJS
-* [rodrigoodhin/editorjs-image-gallery](https://gitlab.com/rodrigoodhin/editorjs-image-gallery) — image gallery block
+* [@rodrigoodhin/editorjs-image-gallery](https://gitlab.com/rodrigoodhin/editorjs-image-gallery) — image gallery block
 * [naduma/editorjs-mermaid](https://github.com/naduma/editorjs-mermaid) — Mermaid Block for Editor.js
 * [VolgaIgor/editorjs-gallery](https://github.com/VolgaIgor/editorjs-gallery) — Gallery Block with multiloading and sorting
 * [AnatoliyKozlov/editorjs-telegram-post](https://github.com/AnatoliyKozlov/editorjs-telegram-post) — Telegram Post widget
@@ -132,7 +132,7 @@ Inspired by the [awesome](https://github.com/sindresorhus/awesome) list. Feel fr
 ### Block Tune Tools
 
 * [@editorjs/text-variant-tune](https://github.com/editor-js/text-variant-tune) — Block Tune for text variants: Call-out, Citation, Details
-* [editorjs-alignment-blocktune](https://github.com/kaaaaaaaaaaai/editorjs-alignment-blocktune) — Add text alignment to any Block Tools.
+* [editorjs-text-alignment-blocktune](https://github.com/kaaaaaaaaaaai/editorjs-alignment-blocktune) — Add text alignment to any Block Tools.
 * [VolgaIgor/editorjs-anchor](https://github.com/VolgaIgor/editorjs-anchor) — Add anchor field to any Block Tools
 * [VolgaIgor/editorjs-notice](https://github.com/VolgaIgor/editorjs-notice) — Highlight or hide with caption any Editor.js block
 * [editorjs-indent-tune](https://www.npmjs.com/package/editorjs-indent-tune) - Block Tune for indenting any type of block

@@ -7,17 +7,12 @@ function CodeRenderer() {
 
     useEffect(() => {
         const fetchCode = async () => {
-            try {
-                const response = await fetch(`http://localhost:5000/get-code/${id}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    console.log('Fetched data:', data);
-                    setCode(data);
-                } else {
-                    console.error('Failed to fetch code.');
-                }
-            } catch (error) {
-                console.error('Error fetching code:', error);
+            const response = await fetch(`http://localhost:5000/code/${id}`);
+            if (response.ok) {
+                const data = await response.json();
+                setCode(data);
+            } else {
+                console.error('Failed to fetch code.');
             }
         };
 
@@ -25,43 +20,28 @@ function CodeRenderer() {
     }, [id]);
 
     useEffect(() => {
-        if (code.css) {
-            const style = document.createElement('style');
-            style.innerHTML = code.css;
-            document.head.appendChild(style);
+        // Inject CSS into the DOM
+        const styleTag = document.createElement('style');
+        styleTag.innerHTML = code.css;
+        document.head.appendChild(styleTag);
 
-            return () => {
-                document.head.removeChild(style);
-            };
+        // Execute JavaScript after the DOM has been updated
+        try {
+            const scriptTag = document.createElement('script');
+            scriptTag.innerHTML = code.js;
+            document.body.appendChild(scriptTag);
+        } catch (error) {
+            console.error('Error executing script:', error);
         }
-    }, [code.css]);
 
-    useEffect(() => {
-        if (code.js) {
-            const executeScript = () => {
-                try {
-                    // Create a script element and append the JS code to the document body
-                    const script = document.createElement('script');
-                    script.innerHTML = code.js;
-                    document.body.appendChild(script);
-
-                    return () => {
-                        document.body.removeChild(script);
-                    };
-                } catch (error) {
-                    console.error('Error executing script:', error);
-                }
-            };
-
-            executeScript();
-        }
-    }, [code.js]);
+        return () => {
+            // Cleanup injected style and script
+            document.head.removeChild(styleTag);
+        };
+    }, [code.css, code.js]);
 
     return (
-        <div
-            id="rendered-code"
-            dangerouslySetInnerHTML={{ __html: code.html }}
-        />
+        <div id="rendered-code" dangerouslySetInnerHTML={{ __html: code.html }} />
     );
 }
 
